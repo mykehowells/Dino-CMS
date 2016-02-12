@@ -1,9 +1,30 @@
-errors.log
+# OS files
+desktop.ini
 .DS_Store
+
+# Don't include the composer vendor folder
 vendor
+
+# NPM modules
 node_modules
+
+# SASS stuff
 .sass-cache
-*.log
+
+# All the error logs
+errors.log
 php-error
+
+# Logs
+*.log
+
+# Ignore any lock files
 *.lock
+
+# Ignore everything inside the config directory
 htdocs/anchor/config/*
+
+# Except for these files
+!htdocs/anchor/config/aliases.php
+!htdocs/anchor/config/error.php
+!htdocs/anchor/config/migrations.php
