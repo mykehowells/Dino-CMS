@@ -1,0 +1,9 @@
+errors.log
+.DS_Store
+vendor
+node_modules
+.sass-cache
+*.log
+php-error
+*.lock
+htdocs/anchor/config/*
