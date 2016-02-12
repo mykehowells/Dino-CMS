@@ -14,6 +14,7 @@ node_modules
 # All the error logs
 errors.log
 php-error
+php-log
 
 # Logs
 *.log
