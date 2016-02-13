@@ -135,13 +135,11 @@ function check($message, $action) {
 	}
 }
 
-check('<code>content</code> directory needs to be writable
-	so we can upload your images and files.', function() {
+check('<code>content/</code> directory needs to be writable so we can upload your images and files.', function() {
 	return is_writable(PATH . 'content');
 });
 
-check('<code>anchor/config</code> directory needs to be temporarily writable
-	so we can create your application and database configuration files.', function() {
+check('<code>dino/config</code> directory needs to be temporarily writable for configuration files.', function() {
 	return is_writable(PATH . 'anchor/config');
 });
 
