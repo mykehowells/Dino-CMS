@@ -57,7 +57,7 @@ class Installer {
 	private static function schema($settings) {
 		$database = $settings['database'];
 
-		$sql = Braces::compile(APP . 'storage/anchor.sql', array(
+		$sql = Braces::compile(APP . 'storage/dino.sql', array(
 			'now' => gmdate('Y-m-d H:i:s'),
 			'charset' => 'utf8',
 			'prefix' => $database['prefix']

@@ -92,8 +92,10 @@ function languages() {
 	return $languages;
 }
 
-function prefered_languages() {
+function preferred_languages() {
 	$preferences = array('en-GB');
+
+/*
 
 	if($lang = Arr::get($_SERVER, 'HTTP_ACCEPT_LANGUAGE')) {
 		$pattern = '/([a-z]{1,8}(-[a-z]{1,8})?)\s*(;\s*q\s*=\s*(1|0\.[0-9]+))?/i';
@@ -102,6 +104,7 @@ function prefered_languages() {
 			$preferences = $matches[1];
 		}
 	}
+*/
 
 	return array_map(function($str) {
 		return str_replace('-', '_', $str);
