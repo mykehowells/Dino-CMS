@@ -54,8 +54,8 @@ return array(
 
 	// phrases
 	'visit_your_site' => 'Visit your site',
-	'powered_by_dino' => 'Powered by Dino, version %s',
-	'make_blogging_beautiful' => 'Make blogging beautiful',
+	'powered_by_dino' => 'Powered by DinoCMS, version %s',
+	'powering_websites' => 'The foundation to beautiful websites',
 
 	// intro
 	'welcome_to_dino' => 'Welcome to Dino',
