@@ -29,3 +29,4 @@ htdocs/anchor/config/*
 !htdocs/anchor/config/aliases.php
 !htdocs/anchor/config/error.php
 !htdocs/anchor/config/migrations.php
+.htaccess
