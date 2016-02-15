@@ -1,6 +1,6 @@
 <?php echo $header; ?>
 
-<div class="logo"><img src="../../../anchor/views/assets/pages/img/logo-big.png" alt="" style="height: 70px;"/></div>
+<div class="logo"><img src="../../../dino/views/assets/pages/img/logo-big.png" alt="" style="height: 70px;"/></div>
 
 <div class="content text-center" style="padding-bottom: 45px; width: 660px; position: relative;">
 	
@@ -11,7 +11,7 @@
 	<h1 style="color: #fff; margin-bottom: 40px;">Install Complete!</h1>
 	
 	<p>
-		Firstly, Dino will need a place to store all of it's information. Please ensure you have created a database first; then provide the software with your connection details and database name.
+		You're good to go!
 	</p>
 	
 	<div class="portlet-body">
@@ -19,14 +19,15 @@
 		<?php if($htaccess): ?>
 			
 			<p>We could not write the <code>htaccess</code> file for you, copy
-			the contents below and create a .htaccess in your Anchor root folder.
-			<textarea id="htaccess"><?php echo $htaccess; ?></textarea></p>
+			the contents below and create a .htaccess in your Dino root folder.</p>
+			<p>
+			<textarea id="htaccess" class="form-control" rows="8" disabled="disabled"><?php echo $htaccess; ?></textarea></p>
 		
 			<script>document.getElementById('htaccess').select();</script>
 			
 		<?php endif; ?>
 		
-		<a href="<?php echo $admin_uri; ?>" class="btn dark btn-outline">Admin Panel</a>
+		<a href="<?php echo $admin_uri; ?>" class="btn default btn-outline">Admin Panel</a>
 		<a href="<?php echo $site_uri; ?>" class="btn default btn-outline">Your new website</a>
 		
 	</div>

@@ -32,10 +32,10 @@ Autoloader::directory(array(
 require APP . 'helpers' . EXT;
 
 /**
- * Anchor setup
+ * Dino setup
  */
 try {
-	Anchor::setup();
+	Dino::setup();
 } catch(Exception $e) {
 
 	if(ini_get('display_errors') != "1") {

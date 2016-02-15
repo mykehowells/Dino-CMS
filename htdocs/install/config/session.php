@@ -2,7 +2,7 @@
 
 return array(
 	'driver' => 'cookie',
-	'cookie' => 'anchorcms-install',
+	'cookie' => 'dinocms-install',
 	'table' => 'sessions',
 	'lifetime' => 14400,
 	'expire_on_close' => true,

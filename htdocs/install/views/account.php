@@ -1,6 +1,6 @@
 <?php echo $header; ?>
 
-<div class="logo"><img src="../../../anchor/views/assets/pages/img/logo-big.png" alt="" style="height: 70px;"/></div>
+<div class="logo"><img src="../../../dino/views/assets/pages/img/logo-big.png" alt="" style="height: 70px;"/></div>
 
 <div class="content text-center" style="padding-bottom: 45px; width: 660px; position: relative;">
 	
@@ -18,10 +18,12 @@
 	
 		<form method="post" action="<?php echo uri_to('account'); ?>" autocomplete="off" roll="form">
 
-			<div class="note note-info">
-                <h4 class="block">Information</h4>
-                <p> <?php echo $messages; ?> </p>
-            </div>
+			<?php if( $messages != "" ): ?>
+				<div class="note note-info dark">
+	                <h4 class="block">Information</h4>
+	                <p> <?php echo $messages; ?> </p>
+	            </div>
+	        <?php endif; ?>
 
 			<div class="form-body">
 			
@@ -66,7 +68,7 @@
 			
 				<div class="form-actions">
 					<div class="row">
-						<a href="<?php echo uri_to('metadata'); ?>" class="btn dark btn-outline">&laquo; Back</a>
+						<a href="<?php echo uri_to('metadata'); ?>" class="btn default btn-outline">&laquo; Back</a>
 						<button type="submit" class="btn default btn-outline">Finish!</button>
 					</div>
 				</div>

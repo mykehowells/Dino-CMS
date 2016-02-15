@@ -24,7 +24,7 @@ switch(constant('ENV')) {
 Autoloader::directory(array(
 	APP . 'models',
 	APP . 'libraries',
-	PATH . 'anchor/libraries'
+	PATH . 'dino/libraries'
 ));
 
 /**
@@ -80,7 +80,7 @@ function current_timezone() {
 function languages() {
 	$languages = array();
 
-	$path = PATH . 'anchor/language';
+	$path = PATH . 'dino/language';
 	$if = new FilesystemIterator($path, FilesystemIterator::SKIP_DOTS);
 
 	foreach($if as $file) {
@@ -143,7 +143,7 @@ check('<code>content/</code> directory needs to be writable so we can upload you
 });
 
 check('<code>dino/config</code> directory needs to be temporarily writable for configuration files.', function() {
-	return is_writable(PATH . 'anchor/config');
+	return is_writable(PATH . 'dino/config');
 });
 
 check('Dino requires the php module <code>pdo_mysql</code> to be installed.', function() {

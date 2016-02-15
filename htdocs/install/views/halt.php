@@ -1,6 +1,6 @@
 <?php echo $header; ?>
 
-	<div class="logo"><img src="../../../anchor/views/assets/pages/img/logo-big.png" alt="" style="height: 70px;"/></div>
+	<div class="logo"><img src="../../../dino/views/assets/pages/img/logo-big.png" alt="" style="height: 70px;"/></div>
 
 	<div class="content text-center" style="padding-bottom: 45px; width: 660px; position: relative;">
 		

@@ -14,21 +14,21 @@
         <meta content="" name="author" />
         
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
-        <link href="<?php echo asset('anchor/views/assets/global/plugins/font-awesome/css/font-awesome.min.css'); ?>" rel="stylesheet" type="text/css" />
-        <link href="<?php echo asset('anchor/views/assets/global/plugins/simple-line-icons/simple-line-icons.min.css'); ?>" rel="stylesheet" type="text/css" />
-        <link href="<?php echo asset('anchor/views/assets/global/plugins/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet" type="text/css" />
-        <link href="<?php echo asset('anchor/views/assets/global/plugins/uniform/css/uniform.default.css'); ?>" rel="stylesheet" type="text/css" />
-        <link href="<?php echo asset('anchor/views/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css'); ?>" rel="stylesheet" type="text/css" />
+        <link href="<?php echo asset('dino/views/assets/global/plugins/font-awesome/css/font-awesome.min.css'); ?>" rel="stylesheet" type="text/css" />
+        <link href="<?php echo asset('dino/views/assets/global/plugins/simple-line-icons/simple-line-icons.min.css'); ?>" rel="stylesheet" type="text/css" />
+        <link href="<?php echo asset('dino/views/assets/global/plugins/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet" type="text/css" />
+        <link href="<?php echo asset('dino/views/assets/global/plugins/uniform/css/uniform.default.css'); ?>" rel="stylesheet" type="text/css" />
+        <link href="<?php echo asset('dino/views/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css'); ?>" rel="stylesheet" type="text/css" />
         
-        <link href="<?php echo asset('anchor/views/assets/global/plugins/select2/css/select2.min.css');?>" rel="stylesheet" type="text/css" />
-        <link href="<?php echo asset('anchor/views/assets/global/plugins/select2/css/select2-bootstrap.min.css');?>" rel="stylesheet" type="text/css" />
+        <link href="<?php echo asset('dino/views/assets/global/plugins/select2/css/select2.min.css');?>" rel="stylesheet" type="text/css" />
+        <link href="<?php echo asset('dino/views/assets/global/plugins/select2/css/select2-bootstrap.min.css');?>" rel="stylesheet" type="text/css" />
         
-        <link href="<?php echo asset('anchor/views/assets/global/css/components.min.css'); ?>" rel="stylesheet" id="style_components" type="text/css" />
-        <link href="<?php echo asset('anchor/views/assets/global/css/plugins.min.css'); ?>" rel="stylesheet" type="text/css" />
+        <link href="<?php echo asset('dino/views/assets/global/css/components.min.css'); ?>" rel="stylesheet" id="style_components" type="text/css" />
+        <link href="<?php echo asset('dino/views/assets/global/css/plugins.min.css'); ?>" rel="stylesheet" type="text/css" />
         
-        <link href="<?php echo asset('anchor/views/assets/layouts/layout3/css/layout.min.css'); ?>" rel="stylesheet" type="text/css" />
-        <link href="<?php echo asset('anchor/views/assets/layouts/layout3/css/themes/default.min.css'); ?>" rel="stylesheet" type="text/css" id="style_color" />
-        <link href="<?php echo asset('anchor/views/assets/layouts/layout3/css/custom.min.css'); ?>" rel="stylesheet" type="text/css" />
+        <link href="<?php echo asset('dino/views/assets/layouts/layout3/css/layout.min.css'); ?>" rel="stylesheet" type="text/css" />
+        <link href="<?php echo asset('dino/views/assets/layouts/layout3/css/themes/default.min.css'); ?>" rel="stylesheet" type="text/css" id="style_color" />
+        <link href="<?php echo asset('dino/views/assets/layouts/layout3/css/custom.min.css'); ?>" rel="stylesheet" type="text/css" />
         
         <link rel="shortcut icon" href="/favicon.png" />
         
@@ -43,7 +43,7 @@
                     <!-- BEGIN LOGO -->
                     <div class="page-logo">
                         <a href="index.html">
-                            <img src="<?php echo asset('anchor/views/assets/pages/img/header-logo.png');?>" alt="logo" class="logo-default">
+                            <img src="<?php echo asset('dino/views/assets/pages/img/header-logo.png');?>" alt="logo" class="logo-default">
                         </a>
                     </div>
                     <!-- END LOGO -->

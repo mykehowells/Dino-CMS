@@ -112,7 +112,7 @@ class Installer {
 			'prefix' => $database['prefix']
 		));
 
-		file_put_contents(PATH . 'anchor/config/db.php', $distro);
+		file_put_contents(PATH . 'dino/config/db.php', $distro);
 	}
 
 	private static function application($settings) {
@@ -124,7 +124,7 @@ class Installer {
 			'timezone' => $settings['i18n']['timezone']
 		));
 
-		file_put_contents(PATH . 'anchor/config/app.php', $distro);
+		file_put_contents(PATH . 'dino/config/app.php', $distro);
 	}
 
 	private static function session($settings) {
@@ -134,7 +134,7 @@ class Installer {
 			'table' => $database['prefix'] . 'sessions'
 		));
 
-		file_put_contents(PATH . 'anchor/config/session.php', $distro);
+		file_put_contents(PATH . 'dino/config/session.php', $distro);
 	}
 
 	private static function rewrite($settings) {

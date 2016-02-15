@@ -1,6 +1,6 @@
 <?php
 
-class Anchor {
+class Dino {
 
 	public static function setup() {
 		// check installation and show intro
