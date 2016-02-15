@@ -28,22 +28,27 @@
 				
 							<input name="token" type="hidden" value="<?php echo $token; ?>">
 							
-							<?php echo $messages; ?>
+							<div class="note note-info">
+                                <h4 class="block">Information</h4>
+                                <p> <?php echo $messages; ?> </p>
+                            </div>
+							
 							<?php $user = filter_var(Input::previous('user'), FILTER_SANITIZE_STRING); ?>
 							
 							<div class="form-body">
 							
 								<div class="form-group">
 									<div class="row">
-						                <label class="col-xs-4 control-label" style="padding-top:4px"><?php echo __('users.username'); ?></label>
-						                <div class="col-xs-8">
+						                <label class="col-sm-2 control-label" style="padding-top:4px"><?php echo __('users.username'); ?></label>
+						                <div class="col-sm-4">
 											<div class="input-icon">
 					                        	<i class="fa fa-user font-blue"></i>
 					                        	<?php echo Form::text('user', $user, array(
 													'id' => 'label-user',
 													'autocapitalize' => 'off',
 													'autofocus' => 'true',
-													'placeholder' => __('users.username')
+													'placeholder' => __('users.username'),
+													'class' => 'form-control'
 												)); ?>
 					                        </div>
 						                </div>
@@ -52,14 +57,15 @@
 					            
 								<div class="form-group">
 									<div class="row">
-						                <label class="col-xs-4 control-label" style="padding-top:4px"><?php echo __('users.password'); ?></label>
-						                <div class="col-xs-8">
+						                <label class="col-sm-2 control-label" style="padding-top:4px"><?php echo __('users.password'); ?></label>
+						                <div class="col-sm-4">
 											<div class="input-icon">
 					                        	<i class="fa fa-lock font-blue"></i>
 					                        	<?php echo Form::password('pass', array(
 													'id' => 'pass',
 													'placeholder' => __('users.password'),
-													'autocomplete' => 'off'
+													'autocomplete' => 'off',
+													'class' => 'form-control'
 												)); ?>
 					                        </div>
 						                </div>

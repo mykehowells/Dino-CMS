@@ -397,6 +397,7 @@
             <div class="page-header-menu">
                 <div class="container">
                     <!-- BEGIN HEADER SEARCH BOX -->
+<!--
                     <form class="search-form" action="page_general_search.html" method="GET">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search" name="query">
@@ -407,6 +408,7 @@
                             </span>
                         </div>
                     </form>
+-->
                     <!-- END HEADER SEARCH BOX -->
                     <div class="hor-menu  ">
                         <ul class="nav navbar-nav">
