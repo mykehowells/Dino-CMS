@@ -1,42 +1,79 @@
 <?php echo $header; ?>
 
-<section class="content">
+<div class="logo"><img src="../../../anchor/views/assets/pages/img/logo-big.png" alt="" style="height: 70px;"/></div>
 
-	<article>
-		<h1>Your first account</h1>
+<div class="content text-center" style="padding-bottom: 45px; width: 660px; position: relative;">
+	
+	<span class="progress" style="display: block;">
+		<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%"></div>
+	</span>
+	
+	<h1 style="color: #fff; margin-bottom: 40px;">Your Dinoccount</h1>
+	
+	<p>
+		Last step; let's create a Dinoccount for your new Dino CMS installation.
+	</p>
+	
+	<div class="portlet-body form">
+	
+		<form method="post" action="<?php echo uri_to('account'); ?>" autocomplete="off" roll="form">
 
-		<p>Oh, we're so tantalisingly close! All we need now is a username and password to log in to the admin area with.</p>
-	</article>
+			<?php echo $messages; ?>
 
-	<form method="post" action="<?php echo uri_to('account'); ?>" autocomplete="off">
-		<?php echo $messages; ?>
-
-		<fieldset>
-			<p>
-				<label for="username">Username</label>
-				<i>You use this to log in.</i>
-				<input tabindex="1" id="username" name="username" value="<?php echo Input::previous('username', 'admin'); ?>">
-			</p>
-
-			<p>
-				<label for="email">Email address</label>
-				<i>Needed if you can’t log in.</i>
-
-				<input tabindex="2" id="email" type="email" name="email" value="<?php echo Input::previous('email'); ?>">
-			</p>
-
-			<p>
-				<label>Password</label>
-				<i>Make sure to <a href="http://bash.org/?244321" target="_blank">pick a secure password</a>.</i>
-				<input tabindex="3" name="password" type="password" value="<?php echo Input::previous('password'); ?>">
-			</p>
-		</fieldset>
-
-		<section class="options">
-			<a href="<?php echo uri_to('metadata'); ?>" class="btn quiet">&laquo; Back</a>
-			<button type="submit" class="btn">Complete</button>
-		</section>
-	</form>
-</section>
+			<div class="form-body">
+			
+				<div class="form-group">
+					<div class="row">
+		                <label class="col-xs-4 control-label" style="padding-top:4px">Username</label>
+		                <div class="col-xs-8">
+							<div class="input-icon">
+                            	<i class="fa fa-user font-blue"></i>
+								<input type="text" class="form-control" id="username" name="username"
+								value="<?php echo Input::previous('username', 'admin'); ?>">
+                            </div>
+		                </div>
+					</div>
+	            </div>
+			
+				<div class="form-group">
+					<div class="row">
+		                <label class="col-xs-4 control-label" style="padding-top:4px">Password</label>
+		                <div class="col-xs-8">
+							<div class="input-icon">
+                            	<i class="fa fa-lock font-blue"></i>
+								<input type="password" class="form-control" id="password" name="password"
+								value="<?php echo Input::previous('password'); ?>">
+                            </div>
+		                </div>
+					</div>
+	            </div>
+			
+				<div class="form-group">
+					<div class="row">
+		                <label class="col-xs-4 control-label" style="padding-top:4px">Email</label>
+		                <div class="col-xs-8">
+							<div class="input-icon">
+                            	<i class="fa fa-envelope font-blue"></i>
+								<input type="text" class="form-control" id="email" name="email"
+								value="<?php echo Input::previous('email', 'you@domain.com'); ?>">
+                            </div>
+		                </div>
+					</div>
+	            </div>
+			
+				<div class="form-actions">
+					<div class="row">
+						<a href="<?php echo uri_to('metadata'); ?>" class="btn dark btn-outline">&laquo; Back</a>
+						<button type="submit" class="btn default btn-outline">Finish!</button>
+					</div>
+				</div>
+	            
+			</div>
+				
+		</form>
+		
+	</div>
+	
+</div>
 
 <?php echo $footer; ?>
