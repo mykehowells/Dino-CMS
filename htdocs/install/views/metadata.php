@@ -19,7 +19,11 @@
 	
 		<form method="post" action="<?php echo uri_to('metadata'); ?>" autocomplete="off" roll="form">
 
-			<?php echo $messages; ?>
+			
+			<div class="note note-info">
+                <h4 class="block">Information</h4>
+                <p> <?php echo $messages; ?> </p>
+            </div>
 
 			<div class="form-body">
 				

@@ -18,7 +18,11 @@
 	
 		<form method="post" action="<?php echo uri_to('database'); ?>" autocomplete="off" roll="form">
 
-			<?php echo $messages; ?>
+			
+			<div class="note note-info">
+                <h4 class="block">Information</h4>
+                <p> <?php echo $messages; ?> </p>
+            </div>
 		
 				<div class="form-body">
 					<div class="form-group">
