@@ -40,6 +40,10 @@ class Error {
 				Cli::write($e->getTraceAsString() . PHP_EOL);
 			}
 			else {
+
+				$html = file_get_contents( PATH . '../assets/error_document.tpl.html' );
+
+/*
 				echo '<html>
 					<head>
 						<title>Uncaught Exception</title>
@@ -57,6 +61,30 @@ class Error {
 						<pre>' . $e->getTraceAsString() . '</pre>
 					</body>
 					</html>';
+*/
+				
+				
+				$lines = explode( "\n", htmlentities( file_get_contents( $e->getFile() ) ) );
+				
+				$line = $e->getLine();
+				$file = $e->getFile();
+				
+				$start_line = ( $line - 5 <= 0 ) ? 0 : $line - 5;
+				
+				$file_contents = array_slice( $lines, $start_line , 1 );
+				
+				$array = [
+					'debug.message' => $e->getMessage(),
+					'debug.location' => "<strong>{$file}</strong> on line <strong>{$line}</strong>",
+					'debug.backtrace' => $e->getTraceAsString(),
+					'copyright.year' => date( 'Y' )
+				];
+				
+				foreach( $array as $find => $replace )	
+					$html = str_replace( '{{' . $find . '}}', $replace, $html );
+
+				echo $html;
+				
 			}
 		}
 		else {

@@ -1,0 +1,174 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Dino CMS error</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author"><!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=all" rel="stylesheet" type="text/css">
+    <link href="/anchor/views/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/anchor/views/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css">
+    <link href="/anchor/views/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/anchor/views/assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css">
+    <link href="/anchor/views/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css"><!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <link href="/anchor/views/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="/anchor/views/assets/global/plugins/morris/morris.css" rel="stylesheet" type="text/css">
+    <link href="/anchor/views/assets/global/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet" type="text/css">
+    <link href="/anchor/views/assets/global/plugins/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" type="text/css"><!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN THEME GLOBAL STYLES -->
+    <link href="/anchor/views/assets/global/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css">
+    <link href="/anchor/views/assets/global/plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css"><!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN THEME GLOBAL STYLES -->
+    <link href="/anchor/views/assets/global/css/components.min.css" rel="stylesheet" id="style_components" type="text/css">
+    <link href="/anchor/views/assets/global/css/plugins.min.css" rel="stylesheet" type="text/css"><!-- END THEME GLOBAL STYLES -->
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link href="/anchor/views/assets/pages/css/login-4.min.css" rel="stylesheet" type="text/css"><!-- END THEME GLOBAL STYLES -->
+    <!-- BEGIN THEME LAYOUT STYLES -->
+    <link href="/anchor/views/assets/layouts/layout3/css/layout.min.css" rel="stylesheet" type="text/css">
+    <link href="/anchor/views/assets/layouts/layout3/css/themes/default.min.css" rel="stylesheet" type="text/css" id="style_color">
+    <link href="/anchor/views/assets/layouts/layout3/css/custom.min.css" rel="stylesheet" type="text/css"><!-- END THEME LAYOUT STYLES -->
+
+<!-- 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/default.min.css"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/zenburn.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+
+	<script>hljs.initHighlightingOnLoad();</script>
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <style type="text/css">
+.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}
+    </style>
+    <style type="text/css">
+
+            .page-content {
+                background: #eff3f8;
+                padding: 15px 0;
+                height: 100%;
+            }
+            .page-footer {
+                background: #3b434c;
+                color: #a2abb7;
+                position: fixed;
+                width: 100%;
+                bottom: 0;
+            }
+            .file_lines ul {
+	            list-style-type: none;
+	            font-family:monospace;
+	            margin:0;
+	            padding:5px;
+            }
+            .file_lines ul li {
+	            font-size:12px;
+	            margin-bottom:5px;
+            }
+            .file_lines ul li span.line-number {
+	            min-width:40px;
+	            display:inline-block;
+            }
+    </style>
+</head>
+
+<body class="page-container-bg-solid page-boxed" style="">
+    <!-- BEGIN CONTAINER -->
+
+    <div class="page-container">
+        <!-- BEGIN CONTENT -->
+
+        <div class="page-content-wrapper">
+            <!-- BEGIN CONTENT BODY -->
+            <!-- BEGIN PAGE HEAD-->
+
+            <div class="page-head">
+                <div class="container">
+                    <!-- BEGIN PAGE TITLE -->
+
+                    <div class="page-title">
+                        <h1>Application Error</h1>
+                    </div><!-- END PAGE TITLE -->
+                </div>
+            </div><!-- END PAGE HEAD-->
+            <!-- BEGIN PAGE CONTENT BODY -->
+
+            <div class="page-content">
+                <div class="container">
+                    <!-- BEGIN PAGE CONTENT INNER -->
+
+                    <div class="page-content-inner">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!-- BEGIN PORTLET-->
+
+                                <div class="portlet light">
+                                    <div class="portlet-title">
+                                        <div class="caption">
+                                            <span class="caption-subject font-dark bold uppercase">Error within application</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="portlet-body">
+                                        <div class="note note-danger">
+                                            <h4 class="block">{{debug.message}}</h4>
+                                            <p>{{debug.location}}</p>
+                                        </div>
+                                        
+                                        <pre>{{debug.backtrace}}</pre>
+                                        
+                                    </div>
+                                </div><!-- END PORTLET-->
+                            </div>
+                        </div>
+                    </div><!-- END PAGE CONTENT INNER -->
+                </div>
+            </div><!-- END PAGE CONTENT BODY -->
+            <!-- END CONTENT BODY -->
+        </div><!-- END CONTENT -->
+    </div><!-- END CONTAINER -->
+    <!-- BEGIN FOOTER -->
+    <!-- BEGIN INNER FOOTER -->
+
+    <div class="page-footer">
+        <div class="container">
+            {{copyright.year}} © Dino CMS.
+        </div>
+    </div>
+
+    <div class="scroll-to-top" style="display: none;"></div><!-- END INNER FOOTER -->
+    <!-- END FOOTER -->
+    <!--[if lt IE 9]>
+<script src="../assets/global/plugins/respond.min.js"></script>
+<script src="../assets/global/plugins/excanvas.min.js"></script> 
+<![endif]-->
+    <!-- BEGIN CORE PLUGINS -->
+    <script async="" src="//www.google-analytics.com/analytics.js" type="text/javascript">
+</script><script async="" src="//www.google-analytics.com/analytics.js" type="text/javascript">
+</script><script src="../assets/global/plugins/jquery.min.js" type="text/javascript">
+</script><script src="../assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript">
+</script><script src="../assets/global/plugins/js.cookie.min.js" type="text/javascript">
+</script><script src="../assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript">
+</script><script src="../assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript">
+</script><script src="../assets/global/plugins/jquery.blockui.min.js" type="text/javascript">
+</script><script src="../assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript">
+</script><script src="../assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript">
+</script><!-- END CORE PLUGINS -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <script src="../assets/global/plugins/jquery.pulsate.min.js" type="text/javascript">
+</script><script src="../assets/global/plugins/jquery-bootpag/jquery.bootpag.min.js" type="text/javascript">
+</script><script src="../assets/global/plugins/holder.js" type="text/javascript">
+</script><!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN THEME GLOBAL SCRIPTS -->
+    <script src="../assets/global/scripts/app.min.js" type="text/javascript">
+</script><!-- END THEME GLOBAL SCRIPTS -->
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="../assets/pages/scripts/ui-general.min.js" type="text/javascript">
+</script><!-- END PAGE LEVEL SCRIPTS -->
+    <!-- BEGIN THEME LAYOUT SCRIPTS -->
+    <script src="../assets/layouts/layout3/scripts/layout.min.js" type="text/javascript">
+</script><script src="../assets/layouts/layout3/scripts/demo.min.js" type="text/javascript">
+</script><script src="../assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript">
+</script><!-- END THEME LAYOUT SCRIPTS -->
+</body>
+</html>
