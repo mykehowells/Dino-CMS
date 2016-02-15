@@ -118,7 +118,7 @@ class Installer {
 	private static function application($settings) {
 		$distro = Braces::compile(APP . 'storage/application.distro.php', array(
 			'url' => $settings['metadata']['site_path'],
-			'index' => (mod_rewrite() ? '' : 'index.php'),
+			'index' => '',
 			'key' => noise(),
 			'language' => $settings['i18n']['language'],
 			'timezone' => $settings['i18n']['timezone']
@@ -138,18 +138,16 @@ class Installer {
 	}
 
 	private static function rewrite($settings) {
-		if(mod_rewrite() or (is_apache() and $settings['metadata']['rewrite'])) {
-			$htaccess = Braces::compile(APP . 'storage/htaccess.distro', array(
-				'base' => $settings['metadata']['site_path'],
-				'index' => (is_cgi() ? 'index.php?/$1' : 'index.php/$1')
-			));
+		$htaccess = Braces::compile(APP . 'storage/htaccess.distro', array(
+			'base' => $settings['metadata']['site_path'],
+			'index' => (is_cgi() ? 'index.php?/$1' : 'index.php/$1')
+		));
 
-			if(isset($htaccess) and is_writable($filepath = PATH . '.htaccess')) {
-				file_put_contents($filepath, $htaccess);
-			}
-			else {
-				Session::put('htaccess', $htaccess);
-			}
+		if(isset($htaccess) and is_writable($filepath = PATH . '.htaccess')) {
+			file_put_contents($filepath, $htaccess);
+		}
+		else {
+			Session::put('htaccess', $htaccess);
 		}
 	}
 
