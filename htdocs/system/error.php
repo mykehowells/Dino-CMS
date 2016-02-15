@@ -41,28 +41,7 @@ class Error {
 			}
 			else {
 
-				$html = file_get_contents( PATH . '../assets/error_document.tpl.html' );
-
-/*
-				echo '<html>
-					<head>
-						<title>Uncaught Exception</title>
-						<style>
-							body{font-family:"Open Sans",arial,sans-serif;background:#FFF;color:#333;margin:2em}
-							code{background:#D1E751;border-radius:4px;padding:2px 6px}
-						</style>
-					</head>
-					<body>
-						<h1>Uncaught Exception</h1>
-						<p><code>' . $e->getMessage() . '</code></p>
-						<h3>Origin</h3>
-						<p><code>' . substr($e->getFile(), strlen(PATH)) . ' on line ' . $e->getLine() . '</code></p>
-						<h3>Trace</h3>
-						<pre>' . $e->getTraceAsString() . '</pre>
-					</body>
-					</html>';
-*/
-				
+				$html = file_get_contents( PATH . '../assets/error_document.tpl.html' );		
 				
 				$lines = explode( "\n", htmlentities( file_get_contents( $e->getFile() ) ) );
 				
