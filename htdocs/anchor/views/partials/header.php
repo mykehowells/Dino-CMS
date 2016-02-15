@@ -30,7 +30,7 @@
         <link href="<?php echo asset('anchor/views/assets/layouts/layout3/css/themes/default.min.css'); ?>" rel="stylesheet" type="text/css" id="style_color" />
         <link href="<?php echo asset('anchor/views/assets/layouts/layout3/css/custom.min.css'); ?>" rel="stylesheet" type="text/css" />
         
-        <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.png" />
         
     </head>
 
