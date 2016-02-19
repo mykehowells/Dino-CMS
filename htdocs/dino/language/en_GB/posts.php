@@ -5,6 +5,7 @@ return array(
 	'posts' => 'Posts',
 
 	'create_post' => 'Create a new post',
+	'edit_post' => 'Edit Post',
 	'noposts_desc' => 'You don’t have any posts!',
 
 	// form fields

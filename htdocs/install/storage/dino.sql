@@ -101,6 +101,7 @@ CREATE TABLE `{{prefix}}users` (
   `password` text NOT NULL,
   `email` varchar(140) NOT NULL,
   `real_name` varchar(140) NOT NULL,
+  `picture` varchar(140) NOT NULL,
   `bio` text NOT NULL,
   `status` enum('inactive','active') NOT NULL,
   `role` enum('administrator','editor','user') NOT NULL,
@@ -108,7 +109,7 @@ CREATE TABLE `{{prefix}}users` (
 ) ENGINE=InnoDB CHARSET={{charset}};
 
 INSERT INTO `{{prefix}}categories` (`title`, `slug`, `description`) VALUES
-('Uncategorised', 'uncategorised', 'Ain\'t no category here.');
+('Uncategorised', 'uncategorised', 'Uncategorised posts');
 
 INSERT INTO `{{prefix}}meta` (`key`, `value`) VALUES
 ('auto_published_comments', '0'),

@@ -94,7 +94,8 @@ class Installer {
 			'password' => Hash::make($account['password']),
 			'email' => $account['email'],
 			'real_name' => 'Administrator',
-			'bio' => 'The bouse',
+			'picture' => '',
+			'bio' => 'Administrator account for your new Dino CMS',
 			'status' => 'active',
 			'role' => 'administrator'
 		));
